@@ -1,0 +1,24 @@
+name: CI Pipeline
+
+on:
+    push:
+        branches:  [main] #when push to main branch then this pipeline will work else not in other branch. alls to prevent unnecessary build
+
+jobs: #group of steps running together
+    build:
+        runs-on: ubuntu-latest #where the job will run, fast
+
+        steps: #actual instruction to be executed one after another
+            - name: Checkout code
+              uses: actions/checkout@v5 #prebuilt github actions
+
+            - name: Set up Python 3.12
+              uses: actions/setup-python@v5
+              with:
+                python-version: 3.12
+
+            - name: Install dependencies
+              run: pip install -r requirements.txt
+
+            - name: Run tests
+              run: pytest

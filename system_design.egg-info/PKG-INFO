@@ -1,3 +1,10 @@
+Metadata-Version: 2.4
+Name: system-design
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
 ### Devops
 Github action pipeline is a workflow and each workflow is a yaml files
 
