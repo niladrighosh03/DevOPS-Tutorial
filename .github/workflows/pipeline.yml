@@ -18,6 +18,8 @@ jobs: #group of steps running together
                 python-version: 3.12
             - name: Install uv
               run: pip install uv   
+            - name: Create Virtual Environment
+              run: uv venv  
             - name: Install dependencies
               run: uv pip install -e .
             - name: Run tests
