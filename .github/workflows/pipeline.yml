@@ -21,4 +21,4 @@ jobs: #group of steps running together
             - name: Install dependencies
               run: uv pip install -e .
             - name: Run tests
-              run: pytest
+              run: uv run pytest
