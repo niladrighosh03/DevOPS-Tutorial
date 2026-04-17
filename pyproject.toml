@@ -9,4 +9,4 @@ dependencies = [
 ]
 
 [project.scripts]
-start = "main:main"
+start = "src.main:main"
